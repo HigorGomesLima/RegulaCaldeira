@@ -1,0 +1,12 @@
+﻿Sorry, there was a problem downloading some files from OneDrive. Please try again.
+
+.netbeans_automatic_build - https://onedrive.live.com/?cid=2a8c602b7efd7f7a&id=2A8C602B7EFD7F7A%211849&action=Download
+
+.netbeans_update_resources - https://onedrive.live.com/?cid=2a8c602b7efd7f7a&id=2A8C602B7EFD7F7A%211848&action=Download
+
+_netbeans_automatic_build - https://onedrive.live.com/?cid=2a8c602b7efd7f7a&id=2A8C602B7EFD7F7A%211847&action=Download
+
+_netbeans_update_resources - https://onedrive.live.com/?cid=2a8c602b7efd7f7a&id=2A8C602B7EFD7F7A%211844&action=Download
+
+
+
