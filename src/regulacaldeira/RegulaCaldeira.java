@@ -23,7 +23,7 @@ public class RegulaCaldeira {
             public void run() {
                 if(Caldeira.getQuantAguaAtual() <= Caldeira.getMaxAgua() && Caldeira.getTempAtual() <= Caldeira.getMaxTemp()){
                 Caldeira.atualizarCaldeira();
-                //frame3.atualizar();
+                frame3.atualizar();
                 }else{
                     JOptionPane.showMessageDialog(null,"Explodiu");
                     timer.cancel();

@@ -5,7 +5,7 @@ public class Caldeira {
     static int quantAguaAtual;
     static int maxTemp = 200;
     static int minTemp = 90;
-    static int maxAgua = 120;
+    static int maxAgua = 130;
     static int minAgua = 20;
     static int fogoAtual = 50;
     static int aguaIN = 2;

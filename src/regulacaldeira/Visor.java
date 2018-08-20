@@ -19,6 +19,10 @@ public class Visor extends javax.swing.JFrame {
     public Visor() {
         initComponents();
     }
+    
+    public void atualizar(){
+        this.panelCaldeira1.atualizar(Caldeira.getQuantAguaAtual(), 0);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

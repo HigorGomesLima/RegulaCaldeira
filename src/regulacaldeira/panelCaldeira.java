@@ -23,6 +23,14 @@ public class panelCaldeira extends javax.swing.JPanel {
         add(agua);
     }
     
+    public void atualizar(int a,int t){
+        //max size 265 = 130 L
+        int tAgua = (265/130)*a;
+        int sAgua = 338 - tAgua;
+        agua.setLocation(56, sAgua);
+        agua.setSize(210, tAgua);
+    }
+    
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
