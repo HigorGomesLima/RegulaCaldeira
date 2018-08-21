@@ -21,7 +21,9 @@ public class Visor extends javax.swing.JFrame {
     }
     
     public void atualizar(){
-        this.panelCaldeira1.atualizar(Caldeira.getQuantAguaAtual(), 0);
+        this.Temp.setText(Caldeira.getTempAtual()+" C");
+        this.agua.setText(Caldeira.getQuantAguaAtual()+" L");
+        this.panelCaldeira1.atualizar(Caldeira.getQuantAguaAtual(), 0, Caldeira.getAguaIN());
     }
 
     /**
@@ -34,6 +36,8 @@ public class Visor extends javax.swing.JFrame {
     private void initComponents() {
 
         panelCaldeira1 = new regulacaldeira.panelCaldeira();
+        agua = new javax.swing.JLabel();
+        Temp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,27 +45,41 @@ public class Visor extends javax.swing.JFrame {
         panelCaldeira1.setLayout(panelCaldeira1Layout);
         panelCaldeira1Layout.setHorizontalGroup(
             panelCaldeira1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 454, Short.MAX_VALUE)
+            .addGap(0, 403, Short.MAX_VALUE)
         );
         panelCaldeira1Layout.setVerticalGroup(
             panelCaldeira1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
+            .addGap(0, 382, Short.MAX_VALUE)
         );
+
+        agua.setText("60 L");
+
+        Temp.setText("100 C");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addComponent(panelCaldeira1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(agua)
+                    .addComponent(Temp))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panelCaldeira1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 87, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(agua)
+                .addGap(27, 27, 27)
+                .addComponent(Temp)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,6 +121,8 @@ public class Visor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Temp;
+    private javax.swing.JLabel agua;
     private regulacaldeira.panelCaldeira panelCaldeira1;
     // End of variables declaration//GEN-END:variables
 }

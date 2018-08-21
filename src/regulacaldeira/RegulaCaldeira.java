@@ -21,7 +21,7 @@ public class RegulaCaldeira {
     
         timer.scheduleAtFixedRate(new TimerTask() {
             public void run() {
-                if(Caldeira.getQuantAguaAtual() <= Caldeira.getMaxAgua() && Caldeira.getTempAtual() <= Caldeira.getMaxTemp()){
+                if(Caldeira.getQuantAguaAtual() <= Caldeira.getMaxAgua() && Caldeira.getQuantAguaAtual() >= Caldeira.getMinAgua()){
                 Caldeira.atualizarCaldeira();
                 frame3.atualizar();
                 }else{

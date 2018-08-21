@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 public class panelCaldeira extends javax.swing.JPanel {
 
     private Canvas agua = new Canvas();
+    private Canvas aguaIN = new Canvas();
 
         
     public panelCaldeira() {
@@ -19,17 +20,25 @@ public class panelCaldeira extends javax.swing.JPanel {
         agua.setBackground(Color.blue);
         agua.setSize(210, 10);
         agua.setLocation(56, 330);
+        aguaIN.setBackground(Color.blue);
+        aguaIN.setSize(55,20);
+        aguaIN.setLocation(0, 57);
         
+        add(aguaIN);
         add(agua);
     }
     
-    public void atualizar(int a,int t){
+    public void atualizar(int a,int t,int i){
         //max size 265 = 130 L
-        //min size 10
+        //max agua IN = 
         int tAgua = (265/130)*a;
         int sAgua = 338 - tAgua;
+        int tAguaIN = i;
+        int sAguaIN = 57 - tAguaIN;
         agua.setLocation(56, sAgua);
         agua.setSize(210, tAgua);
+        aguaIN.setLocation(0, sAguaIN);
+        aguaIN.setSize(55, tAguaIN);
     }
     
     public void paintComponent(Graphics g){
@@ -39,6 +48,9 @@ public class panelCaldeira extends javax.swing.JPanel {
             ImageIcon aux = new ImageIcon(getClass().getResource("caldeira_vazia.png"));
             Image img = aux.getImage();
             g.drawImage(img, 0, 0, this);
+            
+            
+            g.drawImage(fogo,130,380,80,80,this);
         } catch (Exception e) {
             System.out.printf("Erro");
         }
