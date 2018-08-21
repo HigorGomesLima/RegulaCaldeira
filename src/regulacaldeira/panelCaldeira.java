@@ -33,8 +33,8 @@ public class panelCaldeira extends javax.swing.JPanel {
         //max agua IN = 
         int tAgua = (265/130)*a;
         int sAgua = 338 - tAgua;
-        int tAguaIN = i;
-        int sAguaIN = 57 - tAguaIN;
+        int tAguaIN = (15/5) * i;
+        int sAguaIN = 62 - tAguaIN;
         agua.setLocation(56, sAgua);
         agua.setSize(210, tAgua);
         aguaIN.setLocation(0, sAguaIN);
@@ -50,7 +50,7 @@ public class panelCaldeira extends javax.swing.JPanel {
             g.drawImage(img, 0, 0, this);
             
             
-            g.drawImage(fogo,130,380,80,80,this);
+            //g.drawImage(fogo,130,380,80,80,this);
         } catch (Exception e) {
             System.out.printf("Erro");
         }

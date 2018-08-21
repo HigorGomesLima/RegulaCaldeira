@@ -64,8 +64,9 @@ public class Caldeira {
         if(instance == null)
             instance = new Caldeira();
         quantAguaAtual += aguaIN;
-        if(tempAtual > 0)
-            tempAtual += (((fogoAtual*130)/100) - quantAguaAtual)/20;
+        if(tempAtual > 0){
+            tempAtual += (((fogoAtual*130)/100) - quantAguaAtual)/25 + 1;          
+        }
         if(tempAtual < 0)
             tempAtual = 0;
         if (tempAtual > 99){
