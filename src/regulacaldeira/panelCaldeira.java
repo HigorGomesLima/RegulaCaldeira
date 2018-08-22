@@ -12,10 +12,12 @@ public class panelCaldeira extends javax.swing.JPanel {
 
     private Canvas agua = new Canvas();
     private Canvas aguaIN = new Canvas();
+    private int quantFogo;
 
         
     public panelCaldeira() {
         initComponents();
+        quantFogo = 50;
         this.setOpaque(false);
         agua.setBackground(Color.blue);
         agua.setSize(210, 10);
@@ -28,13 +30,14 @@ public class panelCaldeira extends javax.swing.JPanel {
         add(agua);
     }
     
-    public void atualizar(int a,int t,int i){
+    public void atualizar(int a,int t,int i,int f){
         //max size 265 = 130 L
         //max agua IN = 
         int tAgua = (265/130)*a;
         int sAgua = 338 - tAgua;
         int tAguaIN = (15/5) * i;
         int sAguaIN = 62 - tAguaIN;
+        this.quantFogo = f;
         agua.setLocation(56, sAgua);
         agua.setSize(210, tAgua);
         aguaIN.setLocation(0, sAguaIN);
@@ -49,8 +52,9 @@ public class panelCaldeira extends javax.swing.JPanel {
             Image img = aux.getImage();
             g.drawImage(img, 0, 0, this);
             
-            
-            //g.drawImage(fogo,130,380,80,80,this);
+            aux = new ImageIcon(getClass().getResource("fogo.png"));
+            Image fogo = aux.getImage();
+            g.drawImage(fogo,27,(420-this.quantFogo),280,this.quantFogo,this);
         } catch (Exception e) {
             System.out.printf("Erro");
         }

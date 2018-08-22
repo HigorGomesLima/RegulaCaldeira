@@ -23,7 +23,7 @@ public class Visor extends javax.swing.JFrame {
     public void atualizar(){
         this.Temp.setText(Caldeira.getTempAtual()+" C");
         this.agua.setText(Caldeira.getQuantAguaAtual()+" L");
-        this.panelCaldeira1.atualizar(Caldeira.getQuantAguaAtual(), 0, Caldeira.getAguaIN());
+        this.panelCaldeira1.atualizar(Caldeira.getQuantAguaAtual(), 0, Caldeira.getAguaIN(), Caldeira.getFogoAtual());
     }
 
     /**
@@ -49,7 +49,7 @@ public class Visor extends javax.swing.JFrame {
         );
         panelCaldeira1Layout.setVerticalGroup(
             panelCaldeira1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 382, Short.MAX_VALUE)
+            .addGap(0, 463, Short.MAX_VALUE)
         );
 
         agua.setText("60 L");
@@ -70,16 +70,16 @@ public class Visor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelCaldeira1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
             .addGroup(layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(agua)
                 .addGap(27, 27, 27)
                 .addComponent(Temp)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelCaldeira1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
